@@ -1,0 +1,185 @@
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0rem;
+}
+/* global */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    /* background-color: coral; */
+    /* background-image: linear-gradient(to top, #ffffffff, #5e5b5b5d); */
+    
+}
+
+/* @media(min-width:768px){
+    body{
+        background-color: red;
+    }
+} */
+
+h1,h2,h3 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 5.6rem;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+p {
+    font-size: 1.6rem;
+    line-height: 2;
+    margin: 2rem 0rem;
+}
+/* utilities */
+.container {
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.background {
+    background-image: url("./images/photo-1518655048521-f130df041f66.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+/* header */
+header {
+    /* background-color: rgb(255, 230, 0); */
+    height: 40vh;
+    text-align: center;
+    background-image: linear-gradient(#2c6ba2, #4d80ab, #24679f);
+    width: 100%;
+}
+
+.header-icons {
+    font-size: 4.0rem;
+    margin-right: 2rem;
+    margin-top: 5rem;
+}
+
+.header-icons a {
+    color: black;
+}
+
+.menu {
+    margin: 5rem 0rem;
+    color: rgb(255, 255, 255);
+}
+
+.menu a {
+    font-size: 2rem;
+    text-decoration: none;
+    color:black;
+    /* border: 2px solid blue;
+    border-radius: 10px; */
+    /* padding: 5px; */
+    /* background-color: blue; */
+    /* text-shadow: 2px 2px black; */
+    margin-right: 2rem;
+    /* text-transform: uppercase; */
+    font-weight: 300;
+}
+
+.menu a:hover {
+    font-weight: 700;
+}
+
+.montoya {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15%;
+    border: .5rem solid black;
+    padding: .2rem;
+}
+
+li {
+    font-size: 1.6rem;
+}
+
+ul.list-1 {
+    /* background-color: antiquewhite; */
+    /* text-align: center; */
+}
+
+ul.list-1 li {
+    font-size: 1.6rem;
+    /* background-color: aquamarine; */
+    margin: 1rem;
+    padding: 1rem;
+    width: 30rem;
+    list-style-type: square;
+}
+
+ul.list-1 li a {
+    text-decoration: none;
+    color: black;
+}
+
+ul.list-1 li:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+ul.list-1 li:hover a {
+    color: white;
+}
+
+ol.list-1 {
+    list-style-type: lower-roman;
+    background-color: cadetblue;
+    /* color: white; */
+    padding: 1rem;
+}
+
+ol.list-1 li {
+    color: white;
+    border: .1rem dashed black;
+    padding: 1rem;
+    margin: 1rem;
+    width: 30rem;
+}
+
+/* projects */
+
+img.project-img {
+    width: 20rem;
+}
+
+.projects {
+    display: flex;
+    justify-content: space-around;
+    /* background-color: white; */
+}
+
+/* contact */
+
+#contact {
+    background-image: url("https://miro.medium.com/max/1094/1*MCn1VrXQznTi3JMtAIGK0g.jpeg") ;
+    color: white;
+    height: 40vh;
+}
+
+#contact p {
+    text-align: center;
+    padding: 4rem;
+}
+
+#contact p a {
+    text-decoration: none;
+    color: white;
+}
+
+#footer a {
+    color: black;
+    font-size: 1.6rem;
+}
