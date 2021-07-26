@@ -6,76 +6,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/6da635e2db.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="images/favicon.ico">
     <title>National Geographic</title>
 </head>
 <body>
-    <nav> 
-        <img src="images/ng-logo.webp" alt="National Geographic Logo">
-        <p>Login</p>
-        <i class="fas fa-search"></i>
-        <p>Renew</p>
-        <p>Subscribe</p>
-        <p>Menu <i class="fas fa-angle-double-down"></i></p>
+    <nav class="menu"> 
+        <img class="logo" src="images/ng-logo.webp" alt="National Geographic Logo">
+        <div class="icons-container">
+            <p>Login</p>
+            <i class="fas fa-search"></i>
+            <p class="renew-text">Renew</p>
+            <p class="subscribe-btn">Subscribe</p>
+            <p class="menu-text">Menu </p>
+            <i class="fas fa-angle-double-down"></i>
+        </div>
     </nav>
-    <header>
+    <header class="site-header">
         <h1>Latest Stories</h1>
-        <p><span>Subscribe</span> for full access to read stories from National Geographic</p>
+        <p><span class="subscribe-underline">Subscribe</span> for full access to read stories from <span class="testing">National Geographic</span></p>
+        <div class="little-line"></div>
     </header><!-- ends header -->
-
-    <div class="news">
-        <div class="main-news">
-            <img src="images/hospital-news.jpeg" alt="hospital-news">
-            <h3>History & Culture</h3>
-            <p>As Appalachian hospitals disappear, rureal Americans grapple with limited care</p>
-            <p>Read <i class="fas fa-bars"></i></p>
-        </div><!--end .main-news-->
-        <div>
-            <img src="images/animals-news.webp" alt="Sharks">
-            <h3>Animals Sharkfest</h3>
-            <p>Offspring of one of world's biggest bull sharks found</p>
-            <p>Read <i class="fas fa-bars"></i></p>
-        </div>
-        <div>
-            <img src="images/arizona-river.jpeg" alt="Arizona River">
-            <h3>Travel</h3>
-            <p>A legendary Arizona river is under threat</p>
-            <p>Read <i class="fas fa-bars"></i></p>
-        </div>
-    </div><!--ends .news-->
-    <section>
-        <h2>Today's picks</h2>
-        <div>
-            <img src="images/Gymnastics-news.webp" alt="Gymnastics image">
-            <h3>History & Culture</h3>
-            <p>How gymnastics became a deeply beloved Olympic sport</p>
-        </div>
-        <div>
-            <img src="images/Gymnastics-news.webp" alt="Gymnastics image">
-            <h3>History & Culture</h3>
-            <p>How gymnastics became a deeply beloved Olympic sport</p>
-        </div>
-        <div>
-            <img src="images/Gymnastics-news.webp" alt="Gymnastics image">
-            <h3>History & Culture</h3>
-            <p>How gymnastics became a deeply beloved Olympic sport</p>
-        </div>
-        <div>
-            <img src="images/Gymnastics-news.webp" alt="Gymnastics image">
-            <h3>History & Culture</h3>
-            <p>How gymnastics became a deeply beloved Olympic sport</p>
-        </div>
-        <div>
-            <img src="images/Gymnastics-news.webp" alt="Gymnastics image">
-            <h3>History & Culture</h3>
-            <p>How gymnastics became a deeply beloved Olympic sport</p>
-        </div>
-        <div>
-            <img src="images/Gymnastics-news.webp" alt="Gymnastics image">
-            <h3>History & Culture</h3>
-            <p>How gymnastics became a deeply beloved Olympic sport</p>
-        </div>
-        <p>See more</p>
-    </section>
+    <div class="main-section">
+        <div class="news">
+            <div class="main-news">
+                <img src="images/hospital-news.jpeg" alt="hospital-news">
+                <div class="main-news-text">
+                    <h3>History & Culture</h3>
+                    <p>As Appalachian hospitals disappear, rureal Americans grapple with limited care</p>
+                    <p class="read-text white"><i class="fas fa-bars"></i>Read</p>
+                </div><!--main-news-text ends-->
+            </div><!--end .main-news-->
+            <div class="secondary-news-container">
+                <div class="secondary-news">
+                    <img src="images/animals-news.webp" alt="Sharks">
+                    <div class="secondary-news-text">
+                        <h3>Animals Sharkfest</h3>
+                        <p class="title">Offspring of one of world's biggest bull sharks found</p>
+                        <p class="read-text black"><i class="fas fa-bars"></i>Read </p>
+                    </div>
+                </div>
+                
+                <div class="secondary-news">
+                    <img src="images/arizona-river.jpeg" alt="Arizona River">
+                    <div class="secondary-news-text">
+                        <h3>Travel</h3>
+                        <p class="title second">A legendary Arizona river is under threat</p>
+                        <p class="read-text black"><i class="fas fa-bars"></i>Read </p>
+                    </div>
+                </div>
+            </div>
+        </div><!--ends .news-->
+    
+        <section class="picks-container">
+            <h2>Today's picks</h2>
+            <div class="picks-element">
+                <img src="images/Gymnastics-news.webp" alt="Gymnastics image">
+                <div class="picks-element-text">
+                    <h3>History & Culture</h3>
+                    <p>How gymnastics became a deeply beloved Olympic sport</p>
+                </div>
+            </div><!--ends picks-element-->
+            
+            <div class="picks-element">
+                <img src="images/Gymnastics-news.webp" alt="Gymnastics image">
+                <div class="picks-element-text">
+                    <h3>History & Culture</h3>
+                    <p>How gymnastics became a deeply beloved Olympic sport</p>
+                </div>
+            </div>
+            <div class="picks-element">
+                <img src="images/Gymnastics-news.webp" alt="Gymnastics image">
+                <div class="picks-element-text">
+                    <h3>History & Culture</h3>
+                    <p>How gymnastics became a deeply beloved Olympic sport</p>
+                </div>
+            </div>
+            <div class="picks-element">
+                <img src="images/Gymnastics-news.webp" alt="Gymnastics image">
+                <div class="picks-element-text">
+                    <h3>History & Culture</h3>
+                    <p>How gymnastics became a deeply beloved Olympic sport</p>
+                </div>
+            </div>
+            <div class="picks-element">
+                <img src="images/Gymnastics-news.webp" alt="Gymnastics image">
+                <div class="picks-element-text">
+                    <h3>History & Culture</h3>
+                    <p>How gymnastics became a deeply beloved Olympic sport</p>
+                </div>
+            </div>
+            <div class="picks-element">
+                <img src="images/Gymnastics-news.webp" alt="Gymnastics image">
+                <div class="picks-element-text">
+                    <h3>History & Culture</h3>
+                    <p>How gymnastics became a deeply beloved Olympic sport</p>
+                </div>
+            </div>
+            <p class="btn-see-more">See more</p>
+        </section>
+    </div><!--ends main-section-->
 </body>
 </html>

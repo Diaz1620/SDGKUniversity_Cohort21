@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="forms.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Forms</h1>
+    <form action="#">
+        <p>
+            <label for="userName">Name:</label>
+            <input type="text" name="userName" id="userName" disabled>
+        </p>
+        <p>
+            <label for="lastName">Last Name:</label>
+            <input type="text" name="lastName" id="lastName" required>
+        </p>
+        <p>
+            <label for="userAge">Age:</label>
+            <input type="number" name="userAge" id="userAge">
+        </p>
+        <p>
+            <label for="userEmail">Email:</label>
+            <input type="email" name="userEmail" id="userEmail" placeholder="Enter your email">
+        </p>
+        <p>
+            <label for="pass">Password:</label>
+            <input type="password" name="pass" id="pass">
+        </p>
+        <fieldset>
+            <legend>User Info</legend>
+            <p>
+                <label for="country">Country</label>
+                <select name="country" id="userCountry">
+                    <option value="USA">USA</option>
+                    <option value="MEX">MEX</option>
+                    <option value="PR">PR</option>
+                    <option value="CAN">CAN</option>
+                </select>
+            </p>
+            <p>
+                <label for="gender">Male</label>
+                <input type="radio" name="gender" id="gender" value="male">
+            </p>
+            <p>
+                <label for="gender">Female</label>
+                <input type="radio" name="gender" id="gender" value="female">
+            </p>
+            <p>
+                <label for="language">English</label>
+                <input type="checkbox" name="language" id="language" value="english">
+            </p>
+            <p>
+                <label for="language">Spanish</label>
+                <input type="checkbox" name="language" id="language" value="spanish">
+            </p>
+        </fieldset>
+        <p>
+            <label for="color">Color:</label>
+            <input type="color" name="color" id="color">
+        </p>
+        <p>
+            <label for="date">Date:</label>
+            <input type="date" name="date" id="date">
+        </p>
+        <p>
+            <label for="message">Message</label>
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        </p>
+        <input class="btn btn-primary" type="submit" value="Send">
+    </form>
+    <button class="btn btn-danger">Delete</button>
+</body>
+</html>
