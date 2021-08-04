@@ -45,18 +45,27 @@ var salon={
             contactPhone:"555-555-3333"
         }
     ]
+};
+    
+for(pet in salon.pets){
+    console.log(salon.pets[pet].name);
+    document.write(`<p>Pet Name: ${salon.pets[pet].name}</p>`)
 }
 
-// var scoopy={
-//     name:"Scooby",
-//     age:60,
-//     gender:"Male",
-//     breed:"Dane",
-//     service:"Full Service",
-//     ownerName:"Shaggy",
-//     contactPhone:"555-555-5555"
-// }
+    document.write(`<p>We have ${salon.pets.length} pets</p>`);
 
+
+// var scoopy={
+    //     name:"Scooby",
+    //     age:60,
+    //     gender:"Male",
+    //     breed:"Dane",
+    //     service:"Full Service",
+    //     ownerName:"Shaggy",
+    //     contactPhone:"555-555-5555"
+    // }
+    
+    // document.write("We have " +salon.pets.length+ " pets");
 
 function displayInfo(){
     document.getElementById("footer-site").innerHTML=`
@@ -64,7 +73,7 @@ function displayInfo(){
     <p>${salon.address.number} ${salon.address.street}, ${salon.address.city}, ${salon.address.state}, ${salon.telephone}</p>
     <p>The salon is open from ${salon.hour.open} to ${salon.hour.close}</p>
     `;
-}
+};
 
 displayInfo();
 
