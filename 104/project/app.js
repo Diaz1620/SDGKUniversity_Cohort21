@@ -48,7 +48,7 @@ var salon={
 };
     
 for(pet in salon.pets){
-    console.log(salon.pets[pet].name);
+    console.log(salon.pets);
     document.write(`<p>Pet Name: ${salon.pets[pet].name}</p>`)
 }
 
@@ -104,3 +104,23 @@ displayInfo();
 // console.log(person.music[1]);
 // console.log(person.address.street);
 
+for(pet in salon.pets){
+    document.getElementById("table-body").innerHTML+=`
+        <tr>
+            
+            <th scope="row">${salon.pets[pet].name}</th>
+            <th scope="row">${salon.pets[pet].gender}</th>
+            <th scope="row">${salon.pets[pet].breed}</th>
+        </tr>
+    `
+}
+// for(let i = 0; i<salon.pets.length; i++){
+//     document.getElementById("table-body").innerHTML+=`
+//         <tr>
+//             <th scope="row">${i+1}</th>
+//             <th scope="row">${salon.pets[i].name}</th>
+//             <th scope="row">${salon.pets[i].gender}</th>
+//             <th scope="row">${salon.pets[i].breed}</th>
+//         </tr>
+//     `
+// }
