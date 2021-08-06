@@ -114,13 +114,20 @@ for(pet in salon.pets){
         </tr>
     `
 }
-// for(let i = 0; i<salon.pets.length; i++){
-//     document.getElementById("table-body").innerHTML+=`
-//         <tr>
-//             <th scope="row">${i+1}</th>
-//             <th scope="row">${salon.pets[i].name}</th>
-//             <th scope="row">${salon.pets[i].gender}</th>
-//             <th scope="row">${salon.pets[i].breed}</th>
-//         </tr>
-//     `
-// }
+for(let i = 0; i<salon.pets.length; i++){
+    document.getElementById("table-body").innerHTML+=`
+        <tr>
+            <th scope="row">${i+1}</th>
+            <th scope="row">${salon.pets[i].name}</th>
+            <th scope="row">${salon.pets[i].gender}</th>
+            <th scope="row">${salon.pets[i].breed}</th>
+        </tr>
+    `
+}
+
+
+
+
+for(var i=0;i<salon.pets.length;i++){
+    document.write(`<p>Pet Name: ${salon.pets[i].name}</p>`)
+}
