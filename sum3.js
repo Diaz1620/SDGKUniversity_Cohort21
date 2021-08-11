@@ -50,10 +50,13 @@ function bubbleSort(arr){
 
 function sum3(nums){
     nums = bubbleSort(nums);
-    newArr =[];
+    let newArr =[];
+    if(nums.length < 3){
+        return newArr;
+    }
     for(let i = 0; i < nums.length; i++){
         j = i + 1;
-        k = nums.length-i;
+        k = nums.length-1;
         if(nums[i] + nums[j] + nums[k] == 0){
             newArr.push([nums[i],nums[j],nums[k]])
         }
@@ -61,6 +64,36 @@ function sum3(nums){
     return newArr
 }
 
+// console.log(sum3([-1,0,1,2,-1,-4]))
+// console.log(sum3([]))
+// console.log(sum3([0]))
+
+
+function sum3(nums){
+    nums = bubbleSort(nums);
+    let newArr =[];
+    if(nums.length<3){
+        return newArr;
+    }
+    for(let i = 0; i < nums.length-2; i++){
+        let j = i + 1;
+        let k = nums.length-1;
+        while(j < k){
+            let sum = nums[i] + nums[j] + nums[k]
+            if(sum == 0){
+                newArr.push([nums[i],nums[j],nums[k]]);
+                break
+            }
+            if(sum > 0){
+                k --
+            }
+            else{
+                j += 1
+            }
+            
+        }
+    }
+    return newArr
+}
+
 console.log(sum3([-1,0,1,2,-1,-4]))
-console.log(sum3([]))
-console.log(sum3([0]))
