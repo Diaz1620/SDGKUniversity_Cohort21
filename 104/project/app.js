@@ -51,7 +51,7 @@ function register(){
     salon.pets.push(thePet);
     console.log(salon.pets);
     clearInput();
-    displayPetsCard()
+    // displayPetsCard()
     displayPetsTable()
 }
 
@@ -77,28 +77,38 @@ function displayPetsCard(){
             <p> Service: ${salon.pets[pet].service} </p>
             <p> Owner Name: ${salon.pets[pet].ownerName} </p>
             <p> Contact Number: ${salon.pets[pet].contactPhone} </p>
-        </div>`;
+            </div>`;
     }
     document.getElementById('pets').innerHTML = temp;
 }
 
 function displayPetsTable(){
-    for(pet in salon.pets){
-        document.getElementById("table-body").innerHTML+=`
-            <tr>
-                
-                <td scope="row">${salon.pets[pet].name}</td>
-                <td scope="row">${salon.pets[pet].gender}</td>
-                <td scope="row">${salon.pets[pet].breed}</td>
-                <td scope="row"><button onclick="deletepet()" class="btn btn-danger">Delete</button> | <button class="btn btn-primary">Edit</button></td>
+    var temp = ``;
+    for(let idx = 0; idx < salon.pets.length; idx++){
+        temp += `
+            <tr id="loadTable">
+                <td scope="row">${salon.pets[idx].name}</td>
+                <td scope="row">${salon.pets[idx].gender}</td>
+                <td scope="row">${salon.pets[idx].breed}</td>
+                <td scope="row"><button onclick="deletePet(${idx});" class="btn btn-danger">Delete</button> | <button class="btn btn-primary">Edit</button></td>
             </tr>
         `
     }
+    document.getElementById(`table-body`).innerHTML = temp;
+    // console.log(salon.pets);
 
 }
 
+function deletePet(idx){
+    salon.pets.splice(idx, 1);
+    console.log(salon.pets);
+    displayPetsTable();
+}
+
+
+
 function init(){
-    let scooby = new Pet("Scoopy",60,"Male","Dane","Full Service","Shaggy","555-555-5555");
+    let scooby = new Pet("Scooby",60,"Male","Dane","Full Service","Shaggy","555-555-5555");
     let scrappy = new Pet("Scrappy",50,"Male","Dane","Nails Cut","Shaggy","555-555-5555");
     let tweety = new Pet("Tweety",20,"Female","Bird","Feather Fluff","Old Lady","555-555-5554");
     let monty = new Pet("Monty",10,"Male","Python","De-fang","Florida Man","555-555-3333");
