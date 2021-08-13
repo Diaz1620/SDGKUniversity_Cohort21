@@ -1,8 +1,30 @@
 .site-header{
     display: flex;
-    justify-content: space-between;
-    background-color: rgb(180, 180, 180);
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    /* padding: 3rem 6rem; */
 }
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.site-header ul{
+    display: flex;
+    justify-content: space-around;
+    background-color: #51b7ab;
+}
+
+.site-header a{
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+}
+
 
 img{
     width: 20rem;
@@ -21,5 +43,13 @@ img{
     border-radius: 8px;
     background-color: #04a39b3d;
     padding: 1rem;
+}
+
+.highlight td{
+    color: rgb(252, 6, 6);
+}
+
+#editAlert{
+    display: none;
 }
 

@@ -43,6 +43,14 @@ function register(){
     var serviceInput = document.getElementById("petService").value;
     var ownerNameInput = document.getElementById("ownerName").value;
     var contactPhone = document.getElementById("contactPhone").value;
+    if(nameInput!="" && contactPhone!=""){
+        var thePet = new Pet(nameInput,ageInput,genderInput,breedInput,serviceInput,ownerNameInput,contactPhone);
+        salon.pets.push(thePet);
+        console.log(salon.pets);
+        clearInput();
+        displayPetsTable();
+        var alertElement=document.getElementById
+    }
     // console.log(nameInput, ageInput, genderInput, breedInput, serviceInput, ownerNameInput, contactPhone);
     // create the object
     var thePet = new Pet(nameInput,ageInput,genderInput,breedInput,serviceInput,ownerNameInput,contactPhone);
@@ -51,6 +59,8 @@ function register(){
     salon.pets.push(thePet);
     console.log(salon.pets);
     clearInput();
+    document.getElementById("alert").innerHTML=`<div id="alert" class="alert alert-success">A new pet was added</div>`
+    setTimeout(function(){(document.getElementById("alert").classList.add("d-none")); }, 3000)
     // displayPetsCard()
     displayPetsTable()
 }
@@ -84,13 +94,14 @@ function displayPetsCard(){
 
 function displayPetsTable(){
     var temp = ``;
-    for(let idx = 0; idx < salon.pets.length; idx++){
+    for(pet in salon.pets){
         temp += `
-            <tr id="loadTable">
-                <td scope="row">${salon.pets[idx].name}</td>
-                <td scope="row">${salon.pets[idx].gender}</td>
-                <td scope="row">${salon.pets[idx].breed}</td>
-                <td scope="row"><button onclick="deletePet(${idx});" class="btn btn-danger">Delete</button> | <button class="btn btn-primary">Edit</button></td>
+            <tr id=${pet} class="">
+                <td scope="row">${salon.pets[pet].name}</td>
+                <td scope="row">${salon.pets[pet].gender}</td>
+                <td scope="row">${salon.pets[pet].breed}</td>
+                <td scope="row">${salon.pets[pet].ownerName}</td>
+                <td scope="row"><button onclick="deletePet(${pet});" class="btn btn-danger">Delete</button> | <button onclick="goToEdit(${pet});" class="btn btn-primary">Edit</button></td>
             </tr>
         `
     }
@@ -101,11 +112,57 @@ function displayPetsTable(){
 
 function deletePet(idx){
     salon.pets.splice(idx, 1);
-    console.log(salon.pets);
     displayPetsTable();
 }
 
+function goToEdit(idx){
+    i = idx
+    console.log(i);
+    document.getElementById("petName").value=salon.pets[i].name;
+    document.getElementById("petAge").value=salon.pets[i].age;
+    document.getElementById("petGender").value=salon.pets[i].gender;
+    document.getElementById("petBreed").value=salon.pets[i].breed;
+    document.getElementById("ownerName").value=salon.pets[i].ownerName;
+    document.getElementById("contactPhone").value=salon.pets[i].contactPhone;
+    document.getElementById("register").classList.add("d-none")
+    document.getElementById("edit").classList.remove("d-none")
+    document.getElementById("edit").innerHTML=`<button id="edit" onclick="updatePet(${idx});" class="btn btn-primary">Update</button>`
+    
+}
 
+function updatePet(idx){
+    var nameInput = document.getElementById("petName").value;
+    var ageInput = document.getElementById("petAge").value;
+    var genderInput = document.getElementById("petGender").value;
+    var breedInput = document.getElementById("petBreed").value;
+    var serviceInput = document.getElementById("petService").value;
+    var ownerNameInput = document.getElementById("ownerName").value;
+    var contactPhone = document.getElementById("contactPhone").value;
+    var currentPet = salon.pets[idx]
+    currentPet.name = nameInput
+    currentPet.age = ageInput
+    currentPet.gender = genderInput
+    currentPet.breed = breedInput
+    currentPet.service = serviceInput
+    currentPet.ownerName = ownerNameInput
+    currentPet.contactPhone = contactPhone
+    clearInput()
+    displayPetsTable()
+    document.getElementById("register").classList.remove("d-none")
+    document.getElementById("edit").classList.add("d-none")
+}
+
+function searchPet(){
+    var searchString=document.getElementById('searchPet').value;
+    for(pet in salon.pets){
+        if(searchString == salon.pets[pet].name){
+            console.log(salon.pets[pet]);
+            document.getElementById(pet).classList.add('highlight')
+        }
+
+    }
+    console.log(searchString);
+}
 
 function init(){
     let scooby = new Pet("Scooby",60,"Male","Dane","Full Service","Shaggy","555-555-5555");

@@ -10,7 +10,10 @@
 </head>
 <body>
     <header class="site-header">
-        <img src="pet-logo-png.png" alt="pet logo">
+        <div class="header">
+            <img src="pet-logo-png.png" alt="pet logo">
+            <h1>Welcome To Pet Happy Salon!</h1>
+        </div>
         <nav>
             <ul class="nav">
                 <li class="nav-item">
@@ -29,11 +32,11 @@
         </nav>
     </header>
 
-    <main class="container">
+    <main id="form" class="container">
         <h1 class="display-1">Register</h1>
         <!-- <button onclick="hideInputs();">Hide Inputs</button> -->
         <form class="" action="#">
-            <div class="mb-3">
+            <div id="name" class="mb-3">
                 <label class="form-label" for="petName">Name:</label>
                 <input class="form-control" type="text" name="petName" id="petName">
             </div>
@@ -67,33 +70,45 @@
                 <input class="form-control" type="text" name="contactPhone" id="contactPhone">
             </div>
         </form>
-        <button onclick="register();" class="btn btn-primary">Register</button>
+        <div id="alert"></div>
+        <button id="register" onclick="register();" class="btn btn-primary">Register</button>
+        <div id="edit" class="d-none"></div>
+        
+
     </main>
     <!-- <div id="options">
         <h3>Pick How you want pe</h3>
         <button onclick="displayPetsCard()">Cards</button>
         <button onclick="displayPetsTable()">Table</button>
     </div> -->
-    <div class="container" id="pets">
+    <div class="container d-flex flex-column" id="pets">
         <!-- <p>The pets are displayed here</p> -->
-        <table class="table table-dark table-striped">
-            <thead>
-                <tr>
-                    <th scope="col">Pet Name</th>
-                    <th scope="col">Gender</th>
-                    <th scope="col">Breed</th>
-                    <th scope="col">Options</th>
-                </tr>
-            </thead>
-            <tbody id="table-body">
-                
-            </tbody>
-        </table>
+        <div class="d-flex">
+            <input class="form-control w-25" type="search" name="searchPet" id="searchPet">
+            <button onclick="searchPet();" class="btn btn-primary">Search</button>
+        </div>
+        
+            <table class="table table-dark table-striped w-75">
+                <thead>
+                    <tr>
+                        <th scope="col">Pet Name</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Breed</th>
+                        <th scope="col">Owner Name</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    
+                </tbody>
+            </table>
+        
     </div>
     <footer id="footer-site">
 
 
     </footer>
     <script src="app.js"></script>
+    <!-- <script src="edit.js"></script> -->
 </body>
 </html>
