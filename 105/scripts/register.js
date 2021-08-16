@@ -1,6 +1,6 @@
 console.log("Users register");
 class User {
-    constructor(firstName, lastName, username, email, pass, address, address2, city, state, zip, age, method) {
+    constructor(firstName, lastName, username, email, pass, address, address2, city, state, zip, age, method, color) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.username = username;
@@ -13,6 +13,7 @@ class User {
         this.zip = zip;
         this.age = age;
         this.method = method;
+        this.color = color;
     }
 }
 
@@ -29,8 +30,10 @@ function registerUser(){
     let zip = $("#inputZip").val();
     let age = $("#inputAge").val();
     let method = $("#inputPaymentMethod").val();
-    let user = new User(firstName,lastName,username,email,pass,address,address2,city,state,zip,age,method)
-    console.log(user);
+    let color = $("#txtcolor").val();
+    let user = new User(firstName,lastName,username,email,pass,address,address2,city,state,zip,age,method,color)
+    // console.log(color);
+    saveUser(user)
 }
 
 
