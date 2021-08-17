@@ -26,5 +26,5 @@ function clearUsers(){
 }
 
 function clearData(){
-
+    localStorage.clear();
 }

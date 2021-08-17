@@ -33,7 +33,23 @@ function registerUser(){
     let color = $("#txtcolor").val();
     let user = new User(firstName,lastName,username,email,pass,address,address2,city,state,zip,age,method,color)
     // console.log(color);
-    saveUser(user)
+    saveUser(user);
+    clearInputs()
+}
+
+function clearInputs(){
+    $("#inputfirstName").val("");
+    $("#inputlastName").val("");
+    $("#inputUsername").val("");
+    $("#inputEmail").val("");
+    $("#inputPassword").val("");
+    $("#inputAddress").val("");
+    $("#inputAddress2").val("");
+    $("#inputCity").val("");
+    $("#inputState").val("Choose...");
+    $("#inputZip").val("");
+    $("#inputAge").val("");
+    $("#inputPaymentMethod").val("Choose...");
 }
 
 
