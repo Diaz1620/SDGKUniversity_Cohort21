@@ -1,16 +1,16 @@
+const KEY_USERS="users";
 function saveUser(user){
     // load old data
     let data = readUsers();
     // merge
     data.push(user);
-
     // save
-    localStorage.setItem("users",JSON.stringify(data));
-    
+    let val=JSON.stringify(data);
+    localStorage.setItem(KEY_USERS,val);
 }
 
 function readUsers(){
-    let data = localStorage.getItem("users");
+    let data = localStorage.getItem(KEY_USERS);
     if(!data){ // if local storage is empty then
         return [];//create an array
     }
@@ -22,9 +22,10 @@ function readUsers(){
 }
 
 function clearUsers(){
-
+    localStorage.removeItem(KEY_USERS);
 }
 
 function clearData(){
     localStorage.clear();
 }
+

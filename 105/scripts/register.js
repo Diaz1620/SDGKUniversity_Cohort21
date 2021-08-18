@@ -32,7 +32,7 @@ function registerUser(){
     let method = $("#inputPaymentMethod").val();
     let color = $("#txtcolor").val();
     let user = new User(firstName,lastName,username,email,pass,address,address2,city,state,zip,age,method,color)
-    // console.log(color);
+    console.log(user);
     saveUser(user);
     clearInputs()
 }
