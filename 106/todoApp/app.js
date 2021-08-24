@@ -7,10 +7,10 @@ function createTodo() {
     <div class="d-flex todo-item">
         <h5 class="me-3">${text}</h5>
         <button class="btn btn-sm btn-danger me-1">Remove</button>
-        <button class="btn btn-sm btn-success">Done</button>
-    </div>
-    `;
-    $("#todoContainer").append(syntax);
+        </div>
+        `;
+        $("#todoContainer").append(syntax);
+        
 
     // clear input field
     $("#txtTodo").val(''); //write the text/val to the control
@@ -52,7 +52,7 @@ window.onload = init;
 
 
 
-
+// <button class="btn btn-sm btn-success">Done</button>
 
 // $(`.todo-item`).on(`click`,function(){
 //     console.log(`test the click`);
