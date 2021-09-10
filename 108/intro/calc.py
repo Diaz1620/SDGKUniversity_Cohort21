@@ -33,4 +33,6 @@ elif option == "4":
     else:
         res = num1/num2
 
-print(f"The result is: {res}")
+option2 = input("How many times do you want to print result: ")
+
+print(f"The result is: {res} " * int(option2))
