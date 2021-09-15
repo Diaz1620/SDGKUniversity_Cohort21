@@ -1,6 +1,8 @@
+import json
 from flask import Flask, render_template
 
 app = Flask(__name__)
+from mock_data import mock_data
 
 me = {
     "name": "Yadiel",
@@ -31,6 +33,19 @@ def get_email():
 def get_address():
     addresss = me["address"]
     return f"{addresss['number']} {addresss['street']}"
+
+# API Methods
+@app.route("/api/catalog")
+def get_catalog():
+    return json.dumps(mock_data)
+
+@app.route("/api/categories")
+def get_categories():
+    categories = []
+    for cat in mock_data:
+        if cat['category'] not in categories:
+            categories.append(cat['category'])
+    return json.dumps(categories)
 
 
 app.run(debug=True)
